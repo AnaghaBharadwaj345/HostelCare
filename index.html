@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HostelCare System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>HostelCare Complaint System</h1>
+
+  <div class="container">
+
+    <h2>Register Student</h2>
+    <input id="usn" placeholder="USN">
+    <input id="name" placeholder="Name">
+    <input id="password" placeholder="Password">
+    <button onclick="registerStudent()">Register</button>
+
+    <h2>Login</h2>
+    <input id="loginUsn" placeholder="USN">
+    <input id="loginPass" placeholder="Password">
+    <button onclick="loginStudent()">Login</button>
+
+    <h2>Add Complaint</h2>
+    <input id="title" placeholder="Title">
+    <input id="desc" placeholder="Description">
+    <input id="category" placeholder="Category">
+    <input id="location" placeholder="Location">
+    <button onclick="addComplaint()">Submit Complaint</button>
+
+    <h2>Complaints</h2>
+    <div id="output"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
