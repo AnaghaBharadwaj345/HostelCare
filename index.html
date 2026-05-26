@@ -1,39 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
   <title>HostelCare System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>HostelCare Complaint System</h1>
+<h1>HOSTELCARE SYSTEM</h1>
 
-  <div class="container">
+<!-- ================= LOGIN ================= -->
+<div id="loginBox">
+  <h2>Login</h2>
 
-    <h2>Register Student</h2>
-    <input id="usn" placeholder="USN">
-    <input id="name" placeholder="Name">
-    <input id="password" placeholder="Password">
-    <button onclick="registerStudent()">Register</button>
+  <select id="role">
+    <option value="student">Student</option>
+    <option value="warden">Warden</option>
+    <option value="technician">Technician</option>
+  </select>
 
-    <h2>Login</h2>
-    <input id="loginUsn" placeholder="USN">
-    <input id="loginPass" placeholder="Password">
-    <button onclick="loginStudent()">Login</button>
+  <input id="username" placeholder="Username / USN">
+  <input id="password" type="password" placeholder="Password">
 
-    <h2>Add Complaint</h2>
-    <input id="title" placeholder="Title">
-    <input id="desc" placeholder="Description">
-    <input id="category" placeholder="Category">
-    <input id="location" placeholder="Location">
-    <button onclick="addComplaint()">Submit Complaint</button>
+  <button onclick="login()">Login</button>
+</div>
 
-    <h2>Complaints</h2>
-    <div id="output"></div>
+<!-- ================= STUDENT DASHBOARD ================= -->
+<div id="studentDash" class="hidden">
 
-  </div>
+  <h2>Student Dashboard</h2>
 
-  <script src="app.js"></script>
+  <input id="title" placeholder="Title">
+  <input id="desc" placeholder="Description">
+  <input id="category" placeholder="Category">
+  <input id="location" placeholder="Location">
+
+  <button onclick="submitComplaint()">Submit Complaint</button>
+
+  <h3>Your Complaints</h3>
+  <div id="studentComplaints"></div>
+
+</div>
+
+<!-- ================= WARDEN DASHBOARD ================= -->
+<div id="wardenDash" class="hidden">
+
+  <h2>Warden Dashboard</h2>
+  <div id="wardenComplaints"></div>
+
+</div>
+
+<!-- ================= TECHNICIAN DASHBOARD ================= -->
+<div id="techDash" class="hidden">
+
+  <h2>Technician Dashboard</h2>
+  <div id="techComplaints"></div>
+
+</div>
+
+<script src="app.js"></script>
 </body>
+
 </html>
